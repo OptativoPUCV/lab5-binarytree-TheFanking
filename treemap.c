@@ -82,12 +82,12 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
         {
             if (is_equal(tree,key,aux->pair) == 1)
             {
-                current->pair = aux->pair;
+                current->pair = key;
                 aux = aux->left;
             }
             else if (is_equal(tree,key,aux->pair) == 0)
             {
-                current->pair = aux->pair;
+                current->pair = key;
                 aux = aux->right;
             }
         }
