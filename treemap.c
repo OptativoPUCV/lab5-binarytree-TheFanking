@@ -77,16 +77,14 @@ void eraseTreeMap(TreeMap * tree, void* key){
 Pair * searchTreeMap(TreeMap * tree, void* key) 
 {    
     TreeNode *aux = tree->root;
-    Pair *aux2 = malloc(sizeof(Pair));
     while (aux != NULL)
         {
-            memcpy(aux2, key, tree->lower_than(tree->root->pair,key));
-            if (is_equal(tree,key,aux2) == 0)
+            if (is_equal(tree,key,aux->pair) == 0)
             {
                 tree->current = aux;
                 return aux->pair;
             }
-            if (tree->lower_than(aux2,key) == 1)
+            if (tree->lower_than(aux->pair->key,key) == 1)
             {
                 tree->current = aux;
                 aux = aux->left;
