@@ -142,6 +142,5 @@ Pair * firstTreeMap(TreeMap * tree)
 
 Pair * nextTreeMap(TreeMap * tree) 
 {
-    TreeNode* current = tree->current;
     return NULL;
 }
