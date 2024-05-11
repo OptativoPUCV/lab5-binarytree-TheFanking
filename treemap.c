@@ -144,11 +144,12 @@ Pair * firstTreeMap(TreeMap * tree)
 
 Pair * nextTreeMap(TreeMap * tree) 
 {
-    TreeNode *aux = tree->current;
-    if (aux->right == NULL)
+    if (tree == NULL || tree->current == NULL)
     {
         return NULL;
     }
+    TreeNode *aux = tree->current;
+    
     if (aux->right != NULL)
     {
         TreeNode *valor  = minimum(aux->right);
