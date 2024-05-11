@@ -86,11 +86,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
             }
             if (tree->lower_than(aux->pair->key,key))
             {
-                aux = aux->right;
+                aux = aux->left;
             }
             else
             {
-                aux = aux->left;
+                aux = aux->right;
             }
             
         }
