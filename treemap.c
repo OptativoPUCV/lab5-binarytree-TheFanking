@@ -81,7 +81,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
         {
             if (is_equal(tree,key,aux->pair) == 0)
             {
-                tree->current = aux;
+                aux = tree->current;
                 return aux->pair;
             }
             if (tree->lower_than(key,aux->pair) == 1)
