@@ -98,8 +98,22 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 }
 
 
-Pair * upperBound(TreeMap * tree, void* key) {
-    return NULL;
+Pair * upperBound(TreeMap * tree, void* key) 
+{
+    TreeNode *aux =  tree->root;
+    while (aux != NULL)
+        {
+            if (is_equal(tree,key,aux->pair->key) == 1)
+            {
+                tree->current = aux;
+                aux = aux->right;
+            }
+            else
+            {
+                aux = aux->left;
+            }
+        }
+    return aux->pair;
 }
 
 Pair * firstTreeMap(TreeMap * tree) 
