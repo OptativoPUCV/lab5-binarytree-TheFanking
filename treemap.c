@@ -84,11 +84,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
                 tree->current = aux;
                 return aux->pair;
             }
-            if (tree->lower_than((int *)key,aux->pair) == 1)
+            if (tree->lower_than(key,aux->pair) == 1)
             {
                 aux = aux->left;
             }
-            else if (tree->lower_than((int *)key,aux->pair) == 0)
+            else if (tree->lower_than(key,aux->pair) == 0)
             {
                 aux = aux->right;
             }
