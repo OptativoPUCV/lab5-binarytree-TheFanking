@@ -153,6 +153,7 @@ Pair * nextTreeMap(TreeMap * tree)
     if (aux->right != NULL)
     {
         TreeNode *valor  = minimum(aux->right);
+        tree->current = valor;
         return valor->pair;
     }
     else
@@ -161,6 +162,8 @@ Pair * nextTreeMap(TreeMap * tree)
             {
                 aux = aux->parent;
             }
-        return aux->pair;
+            tree->current = aux->parent;
+            return aux->parent->pair;
+    return NULL;    
     }
 }
