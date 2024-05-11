@@ -80,6 +80,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
     Pair *aux2 = malloc(sizeof(Pair));
     while (aux != NULL)
         {
+            memcpy(aux2, key, tree->lower_than(tree->root->pair,key));
             if (is_equal(tree,key,aux2) == 0)
             {
                 tree->current = aux;
