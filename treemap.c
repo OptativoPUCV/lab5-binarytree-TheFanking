@@ -104,7 +104,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
 
 Pair * firstTreeMap(TreeMap * tree) 
 {
-    TreeNode *aux = tree->root;
+    TreeNode *aux = tree->root->left;
     while (aux != NULL)
         {
             aux = aux->left;
