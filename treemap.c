@@ -152,5 +152,12 @@ Pair * nextTreeMap(TreeMap * tree)
         TreeNode *valor  = minimum(aux->right);
         return valor->pair;
     }
-    return NULL;
+    else
+    {
+        while (aux->parent != NULL && aux->parent->right == aux) 
+            {
+                aux = aux->parent;
+            }
+        return aux->parent->pair;
+    }
 }
