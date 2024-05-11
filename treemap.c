@@ -155,7 +155,7 @@ Pair * nextTreeMap(TreeMap * tree)
         TreeNode *valor  = minimum(aux->right);
         return valor->pair;
     }
-    else if (aux->right == NULL)
+    else
     {
         while (aux->parent != NULL && aux->parent->right == aux) 
             {
@@ -163,5 +163,4 @@ Pair * nextTreeMap(TreeMap * tree)
             }
         return aux->parent->pair;
     }
-    return NULL;
 }
