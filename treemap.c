@@ -108,10 +108,9 @@ Pair * firstTreeMap(TreeMap * tree)
     while (aux != NULL)
         {
             aux = aux->left;
-            return aux->pair;
         }
     
-    return NULL;
+    return aux->pair;;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
