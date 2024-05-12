@@ -115,8 +115,11 @@ void removeNode(TreeMap * tree, TreeNode* node)
     }
     else 
     {
-        TreeNode *sucess = minimum(node->right);;
-        removeNode(tree,sucess);
+        TreeNode *sucess = minimum(node->right);
+        if (sucess != NULL)
+        {
+            removeNode(tree,sucess);
+        }
         
     }
  
