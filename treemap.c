@@ -113,6 +113,12 @@ void removeNode(TreeMap * tree, TreeNode* node)
             }
         }
     }
+    else 
+    {
+        TreeNode *sucess = minimum(node->right);;
+        removeNode(tree,sucess);
+        
+    }
  
 }
 
