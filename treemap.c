@@ -100,7 +100,7 @@ void removeNode(TreeMap * tree, TreeNode* node)
         {
             hijo = node->right;
         }
-        if (node->parent != tree->root)
+        if (node != tree->root)
         {
             if (node->parent->left == node)
             {
